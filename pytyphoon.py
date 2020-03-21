@@ -39,7 +39,7 @@ __version__ = 0.1
 import numpy
 import pywt
 import scipy
-# import scipy.ndimage as ndimage
+import scipy.ndimage as ndimage
 import skimage.io as skio
 from skimage.color import rgb2gray
 import scipy.optimize as optimize
