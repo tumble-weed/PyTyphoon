@@ -39,7 +39,8 @@ __version__ = 0.1
 import numpy
 import pywt
 import scipy
-import scipy.ndimage as ndimage
+# import scipy.ndimage as ndimage
+import skimage.io as skio
 import scipy.optimize as optimize
 ###
 
@@ -471,8 +472,8 @@ if __name__=="__main__":
         print('\n* PyTyphoon {} ({}) – "particles" demo'.format(__version__, __file__))
 
         ### load data
-        im0 = ndimage.imread('demo/run010050000.tif', flatten=True).astype(float)/255.
-        im1 = ndimage.imread('demo/run010050010.tif', flatten=True).astype(float)/255.
+        im0 = skio.imread('demo/run010050000.tif', flatten=True).astype(float)/255.#ndimage.imread
+        im1 = skio.imread('demo/run010050010.tif', flatten=True).astype(float)/255.#ndimage.imread
         # Note:
         #   - U1, V1 are vertical (1st axis) components;
         #   - U2, V2 are horizontal (2nd axis) components.
